@@ -203,7 +203,7 @@ func adminDB() (*sqlx.DB, error) {
 	if DatabaseDSN == "" {
 		config := mysql.NewConfig()
 		config.Net = "tcp"
-		config.Addr = "127.0.0.1:3306"
+		config.Addr = "mysql:3306"
 		config.User = "isucon"
 		config.Passwd = "isucon"
 		config.DBName = "isuports"

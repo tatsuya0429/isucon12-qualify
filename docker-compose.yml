@@ -1,4 +1,4 @@
-version: '3.0'
+version: "3.0"
 
 services:
   nginx:
@@ -9,7 +9,6 @@ services:
       - ./public:/public
     ports:
       - "443:443"
-    network_mode: host
     restart: always
 
   webapp:
@@ -70,7 +69,6 @@ services:
       - tenant_db:/home/isucon/webapp/tenant_db
       - initial_data:/home/isucon/initial_data
       - gopkg:/home/isucon/go/pkg
-    network_mode: host
     working_dir: /home/isucon/bench
     command:
       - "bash"
